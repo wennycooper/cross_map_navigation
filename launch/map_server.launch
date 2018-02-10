@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+    <!--  map server for amcl  -->
+    <node name="map_server_amcl" pkg="map_server" type="map_server" args="$(find elevator)/map/map1_amcl.yaml">
+        <remap from="map" to="map_amcl"/>
+    </node>
+    <!--  map server for move_base  -->
+    <node name="map_server_nav" pkg="map_server" type="map_server" args="$(find elevator)/map/map1_nav.yaml"/>
+</launch>

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="navi_center" pkg="elevator" type="naviCenter_RosInterface.py" output="screen"/>
+    <node name="navi_server" pkg="elevator" type="elevator_pc.py" output="screen"/>
+    <node name="elevator_checker" pkg="elevator" type="elevatorChecker.py" output="screen"/>
+</launch>
